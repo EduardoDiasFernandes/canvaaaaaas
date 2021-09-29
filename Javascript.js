@@ -1,5 +1,5 @@
 var canvas = document.getElementById('canvas')
-var ctx = canvas.getContext('2d'); //linha horizontal de cima
+var ctx = canvas.getContext('2d'); 
 function Desenha(){
 	if(canvas.getContext){  //linha cinza
 		ctx.beginPath(); 
@@ -37,7 +37,7 @@ function Desenha(){
 		)
 	}
 	
-	ctx.arc( 150, 50, 30, 0, 2*Math.PI);
+	ctx.arc( 150, 50, 30, 0, 2*Math.PI);                       //circulo c gradiente
 			var grd = ctx.createLinearGradient(0,0,200,0);
     grd.addColorStop(0,"red");
     grd.addColorStop(1,"blue");
@@ -55,6 +55,6 @@ window.onload = function() {          //imagem
                 ctx.drawImage(img, 100, 100);
             }
 			ctx.font = "13px Arial";
-			ctx.fillText("aperte espaco para aparecer a linha vermelha", 10, 10);
+			ctx.fillText("aperte espaco para aparecer a linha vermelha", 10, 10);   //texto c gradiente
 }
 Desenha();
